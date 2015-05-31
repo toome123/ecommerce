@@ -1,8 +1,8 @@
-<?php namespace Feegleweb\OctoshopLite\Components;
+<?php namespace toomeowns\OctoshopLite\Components;
 
 use Cms\Classes\ComponentBase;
-use Feegleweb\OctoshopLite\Models\Category as ShopCategory;
-use Feegleweb\OctoshopLite\Models\Product as ShopProduct;
+use toomeowns\OctoshopLite\Models\Category as ShopCategory;
+use toomeowns\OctoshopLite\Models\Product as ShopProduct;
 
 class Product extends ComponentBase
 {

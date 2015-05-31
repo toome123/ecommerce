@@ -1,4 +1,4 @@
-<?php namespace Feegleweb\OctoshopLite;
+<?php namespace toomeowns\OctoshopLite;
 
 use App;
 use Backend;
@@ -39,10 +39,10 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Feegleweb\OctoshopLite\Components\Basket' => 'shopBasket',
-            'Feegleweb\OctoshopLite\Components\Categories' => 'shopCategories',
-            'Feegleweb\OctoshopLite\Components\Product' => 'shopProduct',
-            'Feegleweb\OctoshopLite\Components\ProductList' => 'shopProductList',
+            'toomeowns\OctoshopLite\Components\Basket' => 'shopBasket',
+            'toomeowns\OctoshopLite\Components\Categories' => 'shopCategories',
+            'toomeowns\OctoshopLite\Components\Product' => 'shopProduct',
+            'toomeowns\OctoshopLite\Components\ProductList' => 'shopProductList',
         ];
     }
 
@@ -51,9 +51,9 @@ class Plugin extends PluginBase
         return [
             'shop' => [
                 'label'       => 'Shop',
-                'url'         => Backend::url('feegleweb/octoshoplite/products'),
+                'url'         => Backend::url('toomeowns/octoshoplite/products'),
                 'icon'        => 'icon-shopping-cart',
-                'permissions' => ['feegleweb.octoshop.*'],
+                'permissions' => ['toomeowns.octoshop.*'],
                 'order'       => 300,
             ],
         ];
@@ -62,8 +62,8 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'feegleweb.octoshop.access_products'   => ['label' => "Manage the shop's products"],
-            'feegleweb.octoshop.access_categories' => ['label' => "Manage the shop categories"],
+            'toomeowns.octoshop.access_products'   => ['label' => "Manage the shop's products"],
+            'toomeowns.octoshop.access_categories' => ['label' => "Manage the shop categories"],
         ];
     }
 }

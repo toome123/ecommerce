@@ -1,4 +1,4 @@
-<?php namespace Feegleweb\OctoshopLite\Controllers;
+<?php namespace toomeowns\OctoshopLite\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
@@ -20,13 +20,13 @@ class Products extends Controller
 
     public $bodyClass = 'compact-container';
 
-    protected $assetsPath = '/plugins/feegleweb/octoshoplite/assets';
+    protected $assetsPath = '/plugins/toomeowns/octoshoplite/assets';
 
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('Feegleweb.OctoshopLite', 'shop', 'products');
+        BackendMenu::setContext('toomeowns.OctoshopLite', 'shop', 'products');
 
         $this->addCss($this->assetsPath.'/css/modal-form.css');
         $this->addJs($this->assetsPath.'/js/product-form.js');

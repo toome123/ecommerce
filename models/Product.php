@@ -1,4 +1,4 @@
-<?php namespace Feegleweb\OctoshopLite\Models;
+<?php namespace toomeowns\OctoshopLite\Models;
 
 use Model;
 use Carbon\Carbon;
@@ -13,7 +13,7 @@ class Product extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'feegleweb_octoshop_products';
+    public $table = 'toomeowns_octoshop_products';
 
     /**
      * @var array Guarded fields
@@ -34,7 +34,7 @@ class Product extends Model
             'required',
             'alpha_dash',
             'between:1,255',
-            'unique:feegleweb_octoshop_products'
+            'unique:toomeowns_octoshop_products'
         ],
         'price' => ['numeric', 'max:99999999.99'],
     ];
@@ -48,8 +48,8 @@ class Product extends Model
      * @var array Relations
      */
     public $belongsToMany = [
-        'categories' => ['Feegleweb\OctoshopLite\Models\Category',
-            'table' => 'feegleweb_octoshop_prod_cat',
+        'categories' => ['toomeowns\OctoshopLite\Models\Category',
+            'table' => 'toomeowns_octoshop_prod_cat',
             'order' => 'name',
         ],
     ];

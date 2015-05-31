@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/feegleweb/octoshoplite/models/product/columns.yaml
+list: $/toomeowns/octoshoplite/models/product/columns.yaml
 
 # Model Class name
-modelClass: Feegleweb\OctoshopLite\Models\Product
+modelClass: toomeowns\OctoshopLite\Models\Product
 
 # List Title
 title: Manage Products
 
 # Link URL for each record
-recordUrl: feegleweb/octoshoplite/products/update/:id
+recordUrl: toomeowns/octoshoplite/products/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

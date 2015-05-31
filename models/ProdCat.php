@@ -1,4 +1,4 @@
-<?php namespace Feegleweb\OctoshopLite\Models;
+<?php namespace toomeowns\OctoshopLite\Models;
 
 use Model;
 use Carbon\Carbon;
@@ -12,7 +12,7 @@ class ProdCat extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'feegleweb_octoshop_prod_cat';
+    public $table = 'toomeowns_octoshop_prod_cat';
 
     /**
      * @var array Guarded fields

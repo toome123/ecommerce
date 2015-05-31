@@ -1,4 +1,4 @@
-<?php namespace Feegleweb\OctoshopLite\Models;
+<?php namespace toomeowns\OctoshopLite\Models;
 
 use Model;
 
@@ -13,7 +13,7 @@ class Category extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'feegleweb_octoshop_categories';
+    public $table = 'toomeowns_octoshop_categories';
 
     /**
      * @var array Guarded fields
@@ -34,13 +34,13 @@ class Category extends Model
      * @var Relations
      */
     public $belongsToMany = [
-        'products' => ['Feegleweb\OctoshopLite\Models\Product',
-            'table' => 'feegleweb_octoshop_prod_cat',
+        'products' => ['toomeowns\OctoshopLite\Models\Product',
+            'table' => 'toomeowns_octoshop_prod_cat',
             'order' => 'updated_at desc',
         ],
     ];
     public $belongsTo = [
-        'parent' => ['Feegleweb\OctoshopLite\Models\Category', 'key' => 'parent_id'],
+        'parent' => ['toomeowns\OctoshopLite\Models\Category', 'key' => 'parent_id'],
     ];
 
     /**

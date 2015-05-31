@@ -1,4 +1,4 @@
-<?php namespace Feegleweb\OctoshopLite\Updates;
+<?php namespace toomeowns\OctoshopLite\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
@@ -8,7 +8,7 @@ class CreateProductsTable extends Migration
 
     public function up()
     {
-        Schema::create('feegleweb_octoshop_products', function ($table) {
+        Schema::create('toomeowns_octoshop_products', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('title')->index();
@@ -25,6 +25,6 @@ class CreateProductsTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('feegleweb_octoshop_products');
+        Schema::dropIfExists('toomeowns_octoshop_products');
     }
 }
