@@ -6,25 +6,25 @@
 name: Product
 
 # Model Form Field configuration
-form: $/toomeowns/octoshoplite/models/product/fields.yaml
+form: $/toomeowns/ecommerce/models/product/fields.yaml
 
 # Model Class name
-modelClass: toomeowns\OctoshopLite\Models\Product
+modelClass: toomeowns\ecommerce\Models\Product
 
 # Default redirect location
-defaultRedirect: toomeowns/octoshoplite/products
+defaultRedirect: toomeowns/ecommerce/products
 
 # Create page
 create:
     title: Create Product
-    redirect: toomeowns/octoshoplite/products/update/:id
-    redirectClose: toomeowns/octoshoplite/products
+    redirect: toomeowns/ecommerce/products/update/:id
+    redirectClose: toomeowns/ecommerce/products
 
 # Update page
 update:
     title: Edit Product
-    redirect: toomeowns/octoshoplite/products
-    redirectClose: toomeowns/octoshoplite/products
+    redirect: toomeowns/ecommerce/products
+    redirectClose: toomeowns/ecommerce/products
 
 # Preview page
 preview:

@@ -1,4 +1,4 @@
-<?php namespace toomeowns\OctoshopLite;
+<?php namespace Toomeowns\Ecommerce;
 
 use App;
 use Backend;
@@ -39,31 +39,31 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'toomeowns\OctoshopLite\Components\Basket' => 'shopBasket',
-            'toomeowns\OctoshopLite\Components\Categories' => 'shopCategories',
-            'toomeowns\OctoshopLite\Components\Product' => 'shopProduct',
-            'toomeowns\OctoshopLite\Components\ProductList' => 'shopProductList',
+            'Toomeowns\Ecommerce\Components\Basket' => 'shopBasket',
+            'Toomeowns\Ecommerce\Components\Categories' => 'shopCategories',
+            'Toomeowns\Ecommerce\Components\Product' => 'shopProduct',
+            'Toomeowns\Ecommerce\Components\ProductList' => 'shopProductList',
         ];
     }
 
     public function registerNavigation()
     {
         return [
-            'shop' => [
+            'Ecommerce' => [
                 'label'       => 'Shop',
-                'url'         => Backend::url('toomeowns/octoshoplite/products'),
+                'url'         => Backend::url('toomeowns/Ecommerce/products'),
                 'icon'        => 'icon-shopping-cart',
-                'permissions' => ['toomeowns.octoshop.*'],
+                'permissions' => ['Toomeowns.Ecommerce.*'],
                 'order'       => 300,
-            ],
+            ]
         ];
     }
 
     public function registerPermissions()
     {
         return [
-            'toomeowns.octoshop.access_products'   => ['label' => "Manage the shop's products"],
-            'toomeowns.octoshop.access_categories' => ['label' => "Manage the shop categories"],
+            'Toomeowns.Ecommerce.access_products'   => ['label' => "Manage the shop's products"],
+            'Toomeowns.Ecommerce.access_categories' => ['label' => "Manage the shop categories"],
         ];
     }
 }

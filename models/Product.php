@@ -1,4 +1,4 @@
-<?php namespace toomeowns\OctoshopLite\Models;
+<?php namespace Toomeowns\Ecommerce\Models;
 
 use Model;
 use Carbon\Carbon;
@@ -13,7 +13,7 @@ class Product extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'toomeowns_octoshop_products';
+    public $table = 'toomeowns_ecommerce_products';
 
     /**
      * @var array Guarded fields
@@ -34,7 +34,7 @@ class Product extends Model
             'required',
             'alpha_dash',
             'between:1,255',
-            'unique:toomeowns_octoshop_products'
+            'unique:toomeowns_ecommerce_products'
         ],
         'price' => ['numeric', 'max:99999999.99'],
     ];
@@ -48,8 +48,8 @@ class Product extends Model
      * @var array Relations
      */
     public $belongsToMany = [
-        'categories' => ['toomeowns\OctoshopLite\Models\Category',
-            'table' => 'toomeowns_octoshop_prod_cat',
+        'categories' => ['Toomeowns\Ecommerce\Models\Category',
+            'table' => 'toomeowns_ecommerce_prod_cat',
             'order' => 'name',
         ],
     ];

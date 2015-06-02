@@ -1,9 +1,9 @@
-<?php namespace toomeowns\OctoshopLite\Components;
+<?php namespace Toomeowns\Ecommerce\Components;
 
 use Cms\Classes\Page;
 use Cms\Classes\ComponentBase;
-use toomeowns\OctoshopLite\Models\Category as ShopCategory;
-use toomeowns\OctoshopLite\Models\Product as ShopProduct;
+use Toomeowns\Ecommerce\Models\Category as ShopCategory;
+use Toomeowns\Ecommerce\Models\Product as ShopProduct;
 
 class Categories extends ComponentBase
 {

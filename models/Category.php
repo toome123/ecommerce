@@ -1,4 +1,4 @@
-<?php namespace toomeowns\OctoshopLite\Models;
+<?php namespace Toomeowns\Ecommerce\Models;
 
 use Model;
 
@@ -13,7 +13,7 @@ class Category extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'toomeowns_octoshop_categories';
+    public $table = 'toomeowns_ecommerce_categories';
 
     /**
      * @var array Guarded fields
@@ -34,13 +34,13 @@ class Category extends Model
      * @var Relations
      */
     public $belongsToMany = [
-        'products' => ['toomeowns\OctoshopLite\Models\Product',
-            'table' => 'toomeowns_octoshop_prod_cat',
+        'products' => ['Toomeowns\Ecommerce\Models\Product',
+            'table' => 'toomeowns_ecommerce_prod_cat',
             'order' => 'updated_at desc',
         ],
     ];
     public $belongsTo = [
-        'parent' => ['toomeowns\OctoshopLite\Models\Category', 'key' => 'parent_id'],
+        'parent' => ['Toomeowns\Ecommerce\Models\Category', 'key' => 'parent_id'],
     ];
 
     /**
@@ -69,7 +69,7 @@ class Category extends Model
             $this->parent_id = null;
         }
 
-        $this->storeNewParent();
+        $this->storeNewParent($this->parent_id);
     }
 
     public function setUrl($pageName, $controller)

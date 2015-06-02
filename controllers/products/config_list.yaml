@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/toomeowns/octoshoplite/models/product/columns.yaml
+list: $/toomeowns/ecommerce/models/product/columns.yaml
 
 # Model Class name
-modelClass: toomeowns\OctoshopLite\Models\Product
+modelClass: toomeowns\ecommerce\Models\Product
 
 # List Title
 title: Manage Products
 
 # Link URL for each record
-recordUrl: toomeowns/octoshoplite/products/update/:id
+recordUrl: toomeowns/ecommerce/products/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

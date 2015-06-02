@@ -1,4 +1,4 @@
-<?php namespace toomeowns\OctoshopLite\Updates;
+<?php namespace Toomeowns\Ecommerce\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
@@ -8,7 +8,7 @@ class CreateCategoriesTable extends Migration
 
     public function up()
     {
-        Schema::create('toomeowns_octoshop_categories', function ($table) {
+        Schema::create('toomeowns_ecommerce_categories', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name')->index();
@@ -26,6 +26,6 @@ class CreateCategoriesTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('toomeowns_octoshop_categories');
+        Schema::dropIfExists('toomeowns_ecommerce_categories');
     }
 }

@@ -1,4 +1,4 @@
-<?php namespace toomeowns\OctoshopLite\Components;
+<?php namespace Toomeowns\Ecommerce\Components;
 
 use Cart;
 use Flash;
@@ -9,8 +9,8 @@ use Backend\Models\BrandSettings;
 use Cms\Classes\Page;
 use Cms\Classes\ComponentBase;
 use Cms\Classes\Settings;
-use toomeowns\OctoshopLite\Models\Order as ShopOrder;
-use toomeowns\OctoshopLite\Models\Product as ShopProduct;
+use Toomeowns\Ecommerce\Models\Order as ShopOrder;
+use Toomeowns\Ecommerce\Models\Product as ShopProduct;
 
 class Basket extends ComponentBase
 {
@@ -129,7 +129,7 @@ class Basket extends ComponentBase
 
         $product = ShopProduct::find($id);
 
-        Cart::associate('Product', 'toomeowns\OctoshopLite\Models')->add(
+        Cart::associate('Product', 'Toomeowns\Ecommerce\Models')->add(
             $id,
             $product->title,
             $quantity,
@@ -171,7 +171,7 @@ class Basket extends ComponentBase
 
         $this->formatPrices($content, $total);
 
-        Mail::sendTo(post('email'), 'toomeowns.octoshoplite::mail.orderconfirm', [
+        Mail::sendTo(post('email'), 'toomeowns.ecommerce::mail.orderconfirm', [
             'admin' => false,
             'name'  => post('first_name'),
             'site'  => BrandSettings::get('app_name'),
@@ -179,7 +179,7 @@ class Basket extends ComponentBase
             'total' => $total,
         ]);
 
-        Mail::sendTo($this->recipientEmail, 'toomeowns.octoshoplite::mail.orderconfirm_admin', [
+        Mail::sendTo($this->recipientEmail, 'toomeowns.ecommerce::mail.orderconfirm_admin', [
             'admin'   => true,
             'name'    => $this->recipientName,
             'address' => implode('<br>', [
